@@ -1,10 +1,8 @@
 package com.example.demo.model;
 
 import lombok.Data;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
@@ -16,4 +14,6 @@ public class Task {
     private LocalDate date;
     private String description;
     private boolean done;
+    @Column(name = "user_id")
+    private long userId;
 }
